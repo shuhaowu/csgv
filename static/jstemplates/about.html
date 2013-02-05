@@ -1,0 +1,103 @@
+<div class="margin">
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <div class="well">
+      <h4 class="text-center">Credits, License</h4>
+      <p>As per agreement, the visualization and content from this visualizer
+      is licensed under <a rel="nofollow" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 Unported</a>.</p>
+      <p>Code that written by me for this visualizer, including the web application, the analysis, and the data importer are licensed under <a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html" target="_blank" rel="nofollow">GNU GPLv3</a>. It is available on <a href="https://github.com/shuhaowu/csgv" target="_blank">github</a>.</p>
+      <p>Competition is held through Kaggle by Colorado School Grades.</p>
+      <hr />
+      <h5 class="text-center">Dependencies</h5>
+      <p>On the client side, this visualizer uses these libraries:
+      <a rel="nofollow" href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
+      <a rel="nofollow" href="http://jquery.com/">jQuery</a>,
+      <a rel="nofollow" href="http://backbonejs.org/">Backbone.js</a>,
+      <a rel="nofollow" href="http://handlebarsjs.com/">Handlebar.js</a>,
+      <a rel="nofollow" href="https://developers.google.com/maps/documentation/javascript/">Google Maps JavaScript APIv3</a>,
+      <a rel="nofollow" href="https://developers.google.com/chart/">Google Chart Tools</a>,
+      <a rel="nofollow" href="https://developers.google.com/chart/interactive/docs/reference">Google Visualization API</a>,
+      <a rel="nofollow" href="http://coffeescript.org/">CoffeeScript</a>, and
+      <a rel="nofollow" href="https://github.com/shuhaowu/coffeecrispt">CoffeeCrispt</a>.</p>
+
+      <p>On the server side, this visualizer uses these libraries:
+      <a rel="nofollow" href="http://www.python.org/">Python 2.7+</a>,
+      <a rel="nofollow" href="http://flask.pocoo.org/">Flask</a>,
+      <a rel="nofollow" href="http://www.scipy.org/">Scipy</a>,
+      <a rel="nofollow" href="http://www.gevent.org/">gevent</a>, and
+      <a rel="nofollow" href="https://github.com/esnme/ultrajson">ujson</a>.
+      </p>
+
+      <p>School markers used in the enrollment default view is from <a href="http://mapicons.nicolasmollet.com/" rel="nofollow" target="_blank">here</a>.</p>
+      <p>The trend arrows of up, down, flat are from
+      <a href="http://www.iconfinder.com/icondetails/27880/32/arrow_red_up_icon" rel="nofollow" target="blank">here (up)</a>,
+      <a href="http://www.iconfinder.com/icondetails/27881/32/arrow_up_icon" rel="nofollow" target="blank">here (down)</a>, and
+      <a href="http://www.iconfinder.com/icondetails/32079/64/arrow_blue_forward_next_right_submit_icon" rel="nofollow" target="blank">here(flat)</a>.
+      </p>
+      </div>
+      <div class="well">
+        <h4 class="text-center">Credits</h4>
+        <p>These people are awesome. Seriously.</p>
+        <ul>
+          <li>Katie - proof read and pretty much rewrote everything here</li>
+          <li>Ryan - beta testing and technical feedback</li>
+        </ul>
+      </div>
+      <div class="well">
+        <h4 class="text-center">About me</h4>
+        <p>I'm <a href="http://shuhaowu.com">Shuhao Wu</a> and I'm an aerospace
+        engineering student from Ottawa, Canada. You can <a href="https://github.com/shuhaowu">fork me on github</a>
+        or view a list of <a href="http://shuhaowu.com/showcase/">my projects</a>.</p>
+        <p>If you want to contact me, you can find my email <a href="http://shuhaowu.com/contact/">here</a>.</p>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="well">
+        <h4 class="text-center">Thoughts on Analysis <br /><small>My 2&#xa2; on the data and its analysis</small></h4>
+        <p>After two weeks of fiddling with the Colorado grades data,
+        I have identified lots of limitation in the data provided and summarized
+        it in the follow few points: the data is
+        heavily bin'ed, the grades data are relative to each other, and
+        the data is incomplete and does not go back in time long enough.</p>
+
+        <p>The first problem is a serious roadblock for in depth analysis. While
+        this is done for a good cause (you obviously don't want to release
+        student data onto the internet), it draws the line
+        between what <em>could</em> be possible and what <em>is</em> possible.
+        Furthermore, the data is also bin'ed into letter grades from F, D-, D, to A+.
+        This is illustrated in the <a href="#charts/frl">wealth vs grades</a> analysis
+        as it is evident that all the data points follow a horizontal line.</p>
+
+        <p>The second issue has some implications on the interpretations of
+        <strong>any</strong> analysis done with the data. Relative data means that
+        there is no way to tell if two schools with scores of 66% and 67% (these are just
+        examples, not actual data) are actually 1% apart or 20% apart. Relative data
+        hides the distribution of the original data. Hence, one must be careful when making
+        any inferences from it. That said, relative data <strong>do</strong> give you
+        an idea of what the underlying distribution of the scores is and the analysis
+        done on the scores cannot be completely ignored but can only be treated as "hints".</p>
+
+        <p>The last point was an obstacle for coding this project. A lot of time
+        were spent dealing with the incompleteness of the data (such as missing ranks from 2011).
+        This, however, can be justified as the data provided are not meant for machines but rather
+        humans to interpret, even though it would be nice if CSG provded
+        processed data as oppose to the raw CSV data. The missing/redacted entries in the rows of the CSV sheet
+        made it difficult to take every school into analysis performed. Furthermore,
+        The lack of historical data makes it difficult to extract trends to help predict the
+        future.</p>
+
+        <p>In any case, it would be preferable to see data that's not bin'ed (not necessarily
+        individual data, but continous grades instead of the discrete ones), not relative,
+        and spans a longer period of time.
+        Raw data will be preferable as more statistical tools can be used and a lot of people
+        much smarter than myself will participate in attempting find trend in the data.
+        However, the data provided is already fairly impressive compared to many other
+        education departments and some hints can be drawn from the results of the analysis done
+        of them.</p>
+      </div>
+    </div>
+  </div>
+</div>

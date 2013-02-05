@@ -1,0 +1,48 @@
+html{ height: 100%; }
+body{ height: 100%; padding: 0; margin: 0; }
+.statusmsg { position: fixed; top: 2em; color: #000; border-radius: 5px; background-color: #D4FFA8; text-align: center; display: none; z-index: 1000; padding: 0.5em 0.8em; }
+.statusmsg .close-status { float: right; margin-right: 10px; margin-left: 10px; }
+h1#loading { text-align: center; margin: 5em 0 0 0; font-size: 1.5em; }
+div#loading-bar { margin: 0 auto; width: 220px; }
+div.navbar { margin-bottom: 0; }
+div.margin { height: 1px; margin: 0.5em 0; }
+
+#mapcanvas { height: auto; position: absolute; margin-top: 42px; top: 0; left: 0; right: 0; bottom: 0;}
+#mapcanvas img { max-width: none; }
+
+div#mapcontrols { position: fixed; bottom: 20px; right: 0; height: 50px; padding; 10px; opacity: 0.7; z-index: 100; background-color: white; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border: 1px solid #CCC; }
+div#mapcontrols .btn-toolbar { margin: 10px; }
+div#mapcontrols:hover { opacity: 1; }
+div#mapcontrols p { line-height: 50px; margin: 0; padding: 0;}
+
+div.chartpanel { display: none; }
+div.chartpanel h4 { text-align: center; }
+
+div.container { margin-bottom: 10px; }
+
+footer { z-index: -1; text-align: center; font-size: 0.85em; opacity: 0.6; position: relative; bottom: 10px; width: 100%; left: 0; }
+
+#details-view.modal {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+  height: 90%;
+}
+
+#details-view table { width: 100%; }
+#details-view.modal .modal-header h3{ text-align: center; }
+
+#details-view.modal.fade.in { top: 5%; }
+
+#details-view #details-level-control a.btn { margin-right: 5px; }
+
+div.chart6 div:first-child{ margin: 0 auto; }
+.text-center { text-align: center; }
+
+div.chart-control { text-align: center; }
+div.chart-control div.btn-group { margin: 0 auto 10px auto; text-align: center; width: inherit; display: inline-block; }
+
+.nav li.navbutton a{ background-color: #49AFCD; color: #FFF; }
+.nav li.navbutton a:hover { background-color: #08C; }
