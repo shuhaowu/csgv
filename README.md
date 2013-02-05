@@ -52,8 +52,6 @@ License
 All **code** is GPLv3. Stuff I've written is in Creative Commons Attribution 
 3.0 Unported. The graphs it generates is also in that if possible. 
 
-Damnit Jim, I'm not a lawyer.
-
 Running instructions
 --------------------
 
